@@ -18,7 +18,6 @@ body{
     background-color: #2D25A0;
     color: #FFFFFF;
     width: 100%;
-    /* height: 677px; */
     padding-bottom: 50px;
 }
 .conmebol-one{
@@ -40,7 +39,9 @@ body{
     font-size: 16px;
     background-color: #E02C6D;
     padding: 10px 24px;
-   
+}
+.conmebol-one i{
+    margin-left: 8px;
 }
 .conmebol-two{    
     width: 556.01px;
@@ -49,9 +50,7 @@ body{
 .conmebol-two img{
     width: 556.01px;
     height: 438px;
-    margin-top: 153px;
-    /* position: absolute;     */
-    
+    margin-top: 153px; 
 }
 
 /* -----------------
@@ -75,7 +74,6 @@ Players styles
     height: 474px;
     padding: 15px;
     margin-bottom: 27px;
-    /* margin: 16px 0px; */
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);    
     font-size: 16px;
     margin-right: 30px;
@@ -112,9 +110,44 @@ highlights styles
     color: #FFFFFF;
     padding: 10px 24px;
 }
+.highlights-one i{
+    margin-left: 8px;
+}
 .highlights-two img{
     width: 567px;
     height: 427px;
+}
+/* -------------------------
+football news bonus section 
+-----------------------------*/
+.section-title{
+    color: #758519;
+    font-size: 24px;
+    margin-left: 25px;
+}
+.new-season-news{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 15px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.team-news{
+    display: flex;
+}
+.team-news img{
+    width: 277px;
+    height: 217px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15); 
+    padding: 5px;
+}
+.team-news img:hover{
+    transform: scale(1.15);
+    transition: transform 3s;
+}
+.news-detail{
+    width: 50%;
+    margin-left: 20px;
 }
 /* ------------------
 footer styles
@@ -150,22 +183,23 @@ Media Queries
         width: 688px;
         flex-direction: column;
     }
-    .section-title-conmebol{
-        mar
-    }
     .conmebol-two img{
         margin-top: 10px;
     }
     .players-description{
         align-items: flex-start;
     }
-    .players{
+    .players, .new-season-news{
         grid-template-columns: repeat(1, 1fr);
         justify-content: center;
         margin-bottom: 10px;
     }
     .player{
         flex-direction: column;
+    }
+    .news-container{
+        width:100%;
+        margin-left: 200px;
     }
     .container-highlights{
         flex-direction: column;
@@ -181,4 +215,25 @@ Media Queries
     .fontawesome{
         margin-left: 200px;
     }
+}
+
+/* --------------
+    tablets
+------------ */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .conmebol-container{
+        width: 1000px;
+        flex-direction: column;
+    }
+    .conmebol-two img{
+        margin-right: 40px;
+        width: 100%;
+    }
+    .players, .new-season-news{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        margin-bottom: 10px; 
+}
+.fontawesome{
+    margin-left: 450px;
 }
